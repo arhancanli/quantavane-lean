@@ -1,0 +1,23 @@
+name = "e982c"
+version = "0.1.0"
+defaultTargets = ["E982C"]
+
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures"
+rev = "2f91d251c07fbbaf9435166d47c11e884a08a6cf"
+
+[[lean_lib]]
+name = "E982C"
+
+[[lean_exe]]
+name = "dumpc"
+root = "DumpC"
+
+[[lean_exe]]
+name = "checklrat"
+root = "CheckLrat"
+
+[[lean_exe]]
+name = "dump12"
+root = "Dump12"

@@ -48,6 +48,28 @@ The lemmas, the encoding and the Lean proof were written by an AI agent (Claude,
 and checked independently: a second encoding of the lemmas, written separately, is unsatisfiable in three other SAT
 solvers, with controls that are satisfiable where they should be. Arhan Canli takes responsibility for the result.
 
+## Erdős Problem #982 for every n up to 13 (`erdos982-le13/`)
+
+The same question for every n with 3 <= n <= 13, in formal-conjectures' form:
+
+```lean
+theorem E982C.erdos_982_le_thirteen (n : ℕ) (hn : 3 ≤ n) (h13 : n ≤ 13) (p : Fin n → EuclideanSpace ℝ (Fin 2))
+    (hp : Function.Injective p) (hp' : EuclideanGeometry.IsConvexPolygon p) :
+    ∃ (i : Fin n), { d : ℝ | ∃ j : Fin n, j ≠ i ∧ d = dist (p i) (p j) }.ncard ≥ n / 2
+```
+
+(`test/Statement12.lean` checks with `type_of%` that this is formal-conjectures' `Erdos982.erdos_982 n hn`.) Before
+this, the published general bounds settled only n <= 7 and n = 9. As for n = 8, Lean itself writes each case as a
+CNF from geometric lemmas proved in Lean, and Lean's verified LRAT checker checks a SAT solver's refutation. The case
+n = 12 needs one more geometric fact: five particular equal distances in a convex 12-gon would force its angles to
+add up to 45 degrees more than they can; Lean proves this from a weighted sum of 71 angle equations (triangle sums,
+angle additivity at a vertex, isosceles base angles), for all 24 symmetric images at once. With those 24 clauses
+added, CaDiCaL's refutation (2,505,174 lemmas after trimming) is checked inside Lean in ten chunks, whose joining
+lemmas are proved for any clause lists. What the proof trusts is as for n = 8: the three standard axioms and the
+`native_decide` axioms of the LRAT checks; no `sorry`. The proof data (4.1 GB) is not in this repository:
+`erdos982-le13/lrat/make_12.sh` and `make_13.sh` regenerate it with CaDiCaL 3.0.1, and `lrat/n12.SHA256SUMS`
+lets you check the result. Details, build order and memory needs: `erdos982-le13/README.md`.
+
 ## Licence
 
 Apache License 2.0 (see `LICENSE`), the licence of formal-conjectures and Mathlib.
@@ -57,7 +79,7 @@ Apache License 2.0 (see `LICENSE`), the licence of formal-conjectures and Mathli
 ```bibtex
 @misc{quantavane-lean,
   author       = {Canli, Arhan},
-  title        = {Lean proofs from Quantavane: Erd{\H{o}}s Problem \#982, the case n = 8},
+  title        = {Lean proofs from Quantavane: Erd{\H{o}}s Problem \#982 for every n up to 13},
   year         = {2026},
   howpublished = {\url{https://github.com/arhancanli/quantavane-lean}},
   note         = {Quantavane; Apache License 2.0}

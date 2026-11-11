@@ -1,0 +1,12 @@
+.lake/
+.claude-flow/
+.swarm/
+ruvector.db
+agentdb*
+lrat/*.cnf
+lrat/gen_13_5.lrat
+lrat/gen_13_5.raw.lrat
+lrat/erdos982_lrat_trim
+lrat/n12/
+lrat/erdos982_lrat_split
+lrat/erdos982_lrat_trim_bin
