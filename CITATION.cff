@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use these proofs, please cite them as below, with Erdős Problem #982 and the formal-conjectures statement."
+type: software
+title: "Lean proofs from Quantavane: Erdős Problem #982, the case n = 8"
+abstract: "A Lean 4 proof of the case n = 8 of Erdős Problem #982 in the form of formal-conjectures' statement: every strictly convex octagon has a vertex with at least 4 distinct distances to the other vertices. Geometric lemmas from orientation signs reduce the question to a finite CNF, refuted by an LRAT certificate checked by Lean's verified checker."
+authors:
+  - family-names: Canli
+    given-names: Arhan
+    affiliation: Quantavane
+    email: arhan@quantavane.com
+license: Apache-2.0
+url: "https://quantavane.com"
+repository-code: "https://github.com/arhancanli/quantavane-lean"
+keywords:
+  - Lean 4
+  - Erdős problems
+  - distinct distances
+  - convex polygons
+  - SAT
+  - LRAT

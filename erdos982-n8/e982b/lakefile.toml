@@ -1,0 +1,19 @@
+name = "e982b"
+version = "0.1.0"
+defaultTargets = ["E982B"]
+
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures"
+rev = "2f91d251c07fbbaf9435166d47c11e884a08a6cf"
+
+[[require]]
+name = "e982"
+path = "../e982"
+
+[[lean_lib]]
+name = "E982B"
+
+[[lean_exe]]
+name = "dumpb"
+root = "DumpB"

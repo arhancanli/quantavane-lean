@@ -1,0 +1,6 @@
+.lake/
+ruvector.db
+agentdb*
+.claude-flow/
+.swarm/
+.DS_Store

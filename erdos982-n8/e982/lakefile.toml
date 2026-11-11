@@ -1,0 +1,10 @@
+name = "e982"
+version = "0.1.0"
+defaultTargets = ["E982", "dumpcnf"]
+
+[[lean_lib]]
+name = "E982"
+
+[[lean_exe]]
+name = "dumpcnf"
+root = "DumpCnf"
