@@ -3,6 +3,16 @@
 Formal proofs, in Lean 4, of results found by Quantavane. Each folder is a Lake project (or two) that builds on its
 own, with the exact versions pinned.
 
+## Prior work on Erdős Problem #982 (added 12 Nov 2026)
+
+The cases proved here were settled before this repository: n = 8 in print by Fishburn ("Distances in convex
+polygons", in *The Mathematics of Paul Erdős I*, Springer, Theorem 3), and every n up to 13 by computer in
+[Paulee314/erdos982](https://github.com/Paulee314/erdos982) (2 Nov 2026; proofs on Zenodo,
+[doi:10.5281/zenodo.23880465](https://doi.org/10.5281/zenodo.23880465)), with solver proofs checked by the verified
+checker cake_lpr. What this repository adds is a proof of those cases in Lean, in the form that
+formal-conjectures states the problem. We found the earlier work after publishing; this note corrects our first
+description of the cases as new.
+
 ## Erdős Problem #982, the case n = 8 (`erdos982-n8/`)
 
 Erdős Problem #982 asks whether every convex polygon with n vertices has a vertex with at least floor(n/2) distinct
