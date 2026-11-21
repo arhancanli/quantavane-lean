@@ -99,3 +99,6 @@ Apache License 2.0 (see `LICENSE`), the licence of formal-conjectures and Mathli
 Cite Erdős Problem #982 at erdosproblems.com and the formal-conjectures statement as well.
 
 Arhan Canli, Quantavane · quantavane.com
+
+Known uses of this work are listed in [USED_BY.md](USED_BY.md). If you use it, please open an issue or a pull request
+with a link so that yours can be added.
